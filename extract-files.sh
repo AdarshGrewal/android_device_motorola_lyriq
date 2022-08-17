@@ -55,6 +55,15 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/hw/android.hardware.audio.service.mediatek)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            ;;
+        vendor/bin/hw/camerahalserver)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            ;;
+        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.15-impl.so)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            ;;
     esac
 }
 
