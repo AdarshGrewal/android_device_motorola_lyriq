@@ -58,7 +58,7 @@ function blob_fixup() {
         system/lib64/libsink.so)
             "$PATCHELF" --add-needed "libshim_sink.so" "$2"
             ;;
-        vendor/bin/hw/android.hardware.audio.service.mediatek)
+        vendor/lib/hw/audio.primary.mt6893.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             ;;
         vendor/bin/hw/camerahalserver)

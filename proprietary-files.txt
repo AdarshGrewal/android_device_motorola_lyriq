@@ -3,7 +3,6 @@
 # Audio
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
-vendor/bin/hw/android.hardware.audio.service.mediatek
 vendor/etc/AudioLog_dynamic.xml
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
@@ -120,17 +119,11 @@ vendor/etc/audio_param/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
-vendor/etc/init/android.hardware.audio.service.mediatek.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/smartpa_param/AW_DSP.bin
 vendor/etc/vintf/manifest/manifest.xml:vendor/etc/vintf/manifest/manifest_audio_radar.xml
 vendor/firmware/aw882xx_acf.bin
-vendor/lib/android.hardware.audio.common@6.0-util.so
-vendor/lib/audio_common-aidl-cpp.so
-vendor/lib/audioclient-types-aidl-cpp.so
-vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
-vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib/hw/audio.bluetooth.default.so
 vendor/lib/hw/audio.primary.default.so
@@ -142,7 +135,6 @@ vendor/lib/hw/audio_policy.stub.so
 vendor/lib/hw/audio_radar.primary.default.so
 vendor/lib/hw/motorola.hardware.audio.radar@1.0-impl.so
 vendor/lib/hw/sound_trigger.primary.default.so
-vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/libaudio_param_parser-vnd.so
@@ -187,13 +179,6 @@ vendor/lib/soundfx/libreverbwrapper.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libvisualizer.so
-vendor/lib/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib/vendor.mediatek.hardware.audio@7.1.so
-vendor/lib64/android.hardware.audio.common@6.0-util.so
-vendor/lib64/audio_common-aidl-cpp.so
-vendor/lib64/audioclient-types-aidl-cpp.so
-vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
-vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mt6893.so
@@ -203,7 +188,6 @@ vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/hw/audio_policy.stub.so
 vendor/lib64/hw/audio_radar.primary.default.so
 vendor/lib64/hw/motorola.hardware.audio.radar@1.0-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudioclient_aidl_conversion.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
@@ -234,8 +218,7 @@ vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libvisualizer.so
 vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
-vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
+vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
