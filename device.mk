@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
