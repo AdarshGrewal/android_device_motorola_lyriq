@@ -55,6 +55,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6893.rc
 
+# NFC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfc/unavail.android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/unavail.android.software.nfc.beam.xml
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
