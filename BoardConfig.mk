@@ -70,7 +70,8 @@ TARGET_KERNEL_CONFIG := \
 BOARD_KERNEL_CMDLINE := \
     bootopt=64S3,32N2,64N2 \
     androidboot.bootdevice=11270000.ufshci \
-    printk.devkmsg=on
+    printk.devkmsg=on \
+    androidboot.selinux=permissive
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
