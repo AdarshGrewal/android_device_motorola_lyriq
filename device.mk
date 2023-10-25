@@ -71,3 +71,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
+
+# Inherit from the proprietary setup
+$(call inherit-product, vendor/motorola/lyriq/lyriq-vendor.mk)
