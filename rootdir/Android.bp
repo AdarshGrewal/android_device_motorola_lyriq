@@ -1,0 +1,18 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "fstab.mt6893",
+    src: "etc/fstab.mt6893",
+    vendor_ramdisk_available: true
+}
+
+prebuilt_etc {
+    name: "init.recovery.mt6893.rc",
+    src: "etc/init.recovery.mt6893.rc",
+    sub_dir: "init",
+    recovery: true,
+}

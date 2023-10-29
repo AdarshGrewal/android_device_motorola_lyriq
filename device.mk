@@ -47,6 +47,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Fstab
+PRODUCT_PACKAGES += \
+    fstab.mt6893.vendor_ramdisk
+
+# Init
+PRODUCT_PACKAGES += \
+    init.recovery.mt6893.rc
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
