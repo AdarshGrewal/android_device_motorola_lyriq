@@ -42,6 +42,9 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 400
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/mot_aids.fs
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_IMAGE_NAME := Image.gz
