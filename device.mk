@@ -52,11 +52,29 @@ PRODUCT_PACKAGES += \
 
 # Fstab
 PRODUCT_PACKAGES += \
+    fstab.mt6893 \
     fstab.mt6893.vendor_ramdisk
+
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss-V1-ndk_platform.vendor
+
+# Hotword enrollment
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Init
 PRODUCT_PACKAGES += \
     init.recovery.mt6893.rc
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor \
+    android.system.keystore2-V1-ndk_platform.vendor
+
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-V1-ndk_platform.vendor
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -65,6 +83,10 @@ PRODUCT_COPY_FILES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-V2-ndk_platform.vendor
+
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -72,8 +94,13 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 31
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V2-ndk_platform.vendor
+
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
 
 # Inherit from the proprietary setup
 $(call inherit-product, vendor/motorola/lyriq/lyriq-vendor.mk)

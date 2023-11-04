@@ -48,6 +48,10 @@ TARGET_SCREEN_DENSITY := 400
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/mot_aids.fs
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_IMAGE_NAME := Image.gz
@@ -109,19 +113,24 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
-BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)-prebuilt/vendor.img
-
 # Platform
 TARGET_BOARD_PLATFORM := mt6893
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6893
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
+TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
+# Vendor security patch level
+VENDOR_SECURITY_PATCH := 2023-09-01
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
