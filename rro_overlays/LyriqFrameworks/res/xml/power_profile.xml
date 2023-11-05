@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<device name="Android">
+    <item name="none">0</item>
+
+    <!-- Additional power used when screen is turned on at minimum brightness -->
+    <item name="screen.on">120.83</item>
+
+    <!-- Additional power used when screen is at maximum brightness, compared to
+         screen at minimum brightness -->
+    <item name="screen.full">433.47</item>
+    <item name="wifi.on">2.739</item>
+    <item name="wifi.active">12.28</item>
+    <item name="wifi.scan">60.11</item>
+    <item name="camera.avg">612.37</item>
+    <item name="camera.flashlight">99.85</item>
+    <item name="gps.on">10.71</item>
+    <item name="radio.active">125.756</item>
+    <item name="radio.scanning">87.8</item>
+    <array name="radio.on">
+        <value>35</value>
+        <value>30</value>
+        <value>25</value>
+        <value>20</value>
+        <value>15</value>
+        <value>10</value>
+        <value>5</value>
+        <value>0.234</value>
+    </array>
+    <array name="cpu.clusters.cores">
+        <value>4</value>
+        <value>3</value>
+        <value>1</value>
+    </array>
+
+    <!-- Different CPU speeds as reported in
+         /sys/devices/system/cpu/cpu0/cpufreq/stats/scaling_available_frequencies -->
+    <array name="cpu.core_speeds.cluster0">
+        <value>500000</value>
+        <value>600000</value>
+        <value>675000</value>
+        <value>750000</value>
+        <value>850000</value>
+        <value>925000</value>
+        <value>1000000</value>
+        <value>1075000</value>
+        <value>1250000</value>
+        <value>1350000</value>
+        <value>1450000</value>
+        <value>1525000</value>
+        <value>1625000</value>
+        <value>1725000</value>
+        <value>1800000</value>
+        <value>2000000</value>
+    </array>
+
+    <!-- Different CPU speeds as reported in
+         /sys/devices/system/cpu/cpu4/cpufreq/stats/scaling_available_frequencies -->
+    <array name="cpu.core_speeds.cluster1">
+        <value>437000</value>
+        <value>700000</value>
+        <value>902000</value>
+        <value>1046000</value>
+        <value>1162000</value>
+        <value>1335000</value>
+        <value>1451000</value>
+        <value>1537000</value>
+        <value>1624000</value>
+        <value>1740000</value>
+        <value>1855000</value>
+        <value>1985000</value>
+        <value>2200000</value>
+        <value>2354000</value>
+        <value>2507000</value>
+        <value>2600000</value>
+    </array>
+    <array name="cpu.core_speeds.cluster2">
+        <value>659000</value>
+        <value>921000</value>
+        <value>1108000</value>
+        <value>1258000</value>
+        <value>1370000</value>
+        <value>1482000</value>
+        <value>1632000</value>
+        <value>1745000</value>
+        <value>1820000</value>
+        <value>1938000</value>
+        <value>2032000</value>
+        <value>2127000</value>
+        <value>2292000</value>
+        <value>2410000</value>
+        <value>2529000</value>
+        <value>2600000</value>
+    </array>
+
+    <!-- Additional power used by a CPU from cluster 0 when running at different
+         speeds. Currently this measurement also includes cluster cost. -->
+    <array name="cpu.core_power.cluster0">
+        <value>39.135</value>
+        <value>40.036</value>
+        <value>40.904</value>
+        <value>41.697</value>
+        <value>42.535</value>
+        <value>44.259</value>
+        <value>45.893</value>
+        <value>47.937</value>
+        <value>51.293</value>
+        <value>52.809</value>
+        <value>55.373</value>
+        <value>59.531</value>
+        <value>63.826</value>
+        <value>67.296</value>
+        <value>70.959</value>
+        <value>75.776</value>
+    </array>
+
+    <!-- Additional power used by a CPU from cluster 1 when running at different
+         speeds. Currently this measurement also includes cluster cost. -->
+    <array name="cpu.core_power.cluster1">
+        <value>63.991</value>
+        <value>72.287</value>
+        <value>78.217</value>
+        <value>85.011</value>
+        <value>92.651</value>
+        <value>99.115</value>
+        <value>105.298</value>
+        <value>112.451</value>
+        <value>118.871</value>
+        <value>123.101</value>
+        <value>135.113</value>
+        <value>143.209</value>
+        <value>157.002</value>
+        <value>168.727</value>
+        <value>185.005</value>
+        <value>202.284</value>
+    </array>
+    <array name="cpu.core_power.cluster2">
+        <value>60.991</value>
+        <value>69.287</value>
+        <value>76.217</value>
+        <value>88.011</value>
+        <value>92.651</value>
+        <value>102.115</value>
+        <value>120.298</value>
+        <value>132.451</value>
+        <value>146.871</value>
+        <value>155.101</value>
+        <value>165.113</value>
+        <value>178.209</value>
+        <value>187.002</value>
+        <value>198.727</value>
+        <value>205.005</value>
+        <value>222.284</value>
+    </array>
+
+    <!-- Additional power consumption by CPU cluster0 itself when running excluding cores in it -->
+    <item name="cpu.cluster_power.cluster0">15.33</item>
+
+    <!-- Additional power consumption by CPU cluster1 itself when running excluding cores in it -->
+    <item name="cpu.cluster_power.cluster1">18.83</item>
+
+    <!-- Power consumption when CPU is suspended -->
+    <item name="cpu.suspend">8</item>
+
+  <!-- Current when CPU is idle -->
+    <item name="cpu.idle">10.065</item>
+
+  <!-- Additional power consumption by CPU excluding cluster and core when
+       running -->
+    <item name="cpu.active">12.204</item>
+
+  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
+    <item name="battery.capacity">4400</item>
+</device>

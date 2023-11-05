@@ -176,6 +176,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/unavail.android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/unavail.android.software.nfc.beam.xml
 
+# Overlay
+PRODUCT_PACKAGES += \
+    LyriqFrameworks \
+    LyriqSystemUI \
+    LyriqWifi
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
