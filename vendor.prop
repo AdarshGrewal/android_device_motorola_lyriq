@@ -1,4 +1,5 @@
 ro.vendor.hw.nfc=nq
+ro.mot.build.customerid=global
 ro.surface_flinger.protected_contents=true
 ro.vendor.rc=/vendor/etc/init/hw/
 ro.vendor.init.sensor.rc=init.sensor_2_0.rc
