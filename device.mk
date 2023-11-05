@@ -197,6 +197,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_PACKAGES += \
     LyriqFrameworks \
+    LyriqLineageSettings \
     LyriqSystemUI \
     LyriqTelephony \
     LyriqWifi
