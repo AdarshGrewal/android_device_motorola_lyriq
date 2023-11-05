@@ -1676,25 +1676,6 @@ vendor/lib64/vendor.nxp.hardware.nxpese@1.0.so
 vendor/lib64/vendor.nxp.nxpese@1.0.so
 vendor/lib64/vendor.nxp.nxpnfc@2.0.so
 vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so
-vendor/odm/etc/permissions/sku_b/unavail.android.hardware.nfc.hce.xml
-vendor/odm/etc/permissions/sku_b/unavail.android.hardware.nfc.hcef.xml
-vendor/odm/etc/permissions/sku_b/unavail.android.hardware.nfc.uicc.xml
-vendor/odm/etc/permissions/sku_b/unavail.android.hardware.nfc.xml
-vendor/odm/etc/permissions/sku_b/unavail.android.hardware.se.omapi.ese.xml
-vendor/odm/etc/permissions/sku_bn/unavail.android.hardware.se.omapi.ese.xml
-vendor/odm/etc/permissions/sku_d/unavail.android.hardware.nfc.hce.xml
-vendor/odm/etc/permissions/sku_d/unavail.android.hardware.nfc.hcef.xml
-vendor/odm/etc/permissions/sku_d/unavail.android.hardware.nfc.uicc.xml
-vendor/odm/etc/permissions/sku_d/unavail.android.hardware.nfc.xml
-vendor/odm/etc/permissions/sku_d/unavail.android.hardware.se.omapi.ese.xml
-vendor/odm/etc/permissions/sku_de/android.hardware.nfc.ese.xml
-vendor/odm/etc/permissions/sku_dn/unavail.android.hardware.se.omapi.ese.xml
-vendor/odm/etc/permissions/sku_n/unavail.android.hardware.se.omapi.ese.xml
-vendor/odm/etc/vintf/manifest_b.xml
-vendor/odm/etc/vintf/manifest_bn.xml
-vendor/odm/etc/vintf/manifest_d.xml
-vendor/odm/etc/vintf/manifest_de.xml
-vendor/odm/etc/vintf/manifest_dn.xml
 
 # NFC (firmware)
 vendor/lib/libpn557_fw.so
