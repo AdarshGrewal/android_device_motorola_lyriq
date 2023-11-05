@@ -143,6 +143,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6893.rc
 
+# IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.km41.xml \
@@ -180,6 +193,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     LyriqFrameworks \
     LyriqSystemUI \
+    LyriqTelephony \
     LyriqWifi
 
 # Partitions

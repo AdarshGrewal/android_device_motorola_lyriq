@@ -1804,6 +1804,36 @@ vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
+# Radio (IMS system)
+system/bin/vtservice
+system/etc/init/init.vtservice.rc
+system/lib64/libcomutils.so
+system/lib64/libimsma.so
+system/lib64/libimsma_adapt.so
+system/lib64/libimsma_rtp.so
+system/lib64/libimsma_socketwrapper.so
+system/lib64/libmtk_vt_service.so
+system/lib64/libmtk_vt_wrapper.so
+system/lib64/libsignal.so
+system/lib64/libsink.so
+system/lib64/libsource.so
+system/lib64/libvcodec_cap.so
+system/lib64/libvcodec_capenc.so
+system/lib64/libvt_avsync.so
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# Radio (IMS system) - miui_RUBYGlobal_V14.0.5.0.TMOMIXM
+-system/framework/mediatek-common.jar|65cb5b86acb0eb42bb3ec2987e1d80a88ea0756a
+-system/framework/mediatek-framework.jar|37f3a324333413eb6eb505e4c3d945132cede443
+-system/framework/mediatek-ims-base.jar|8e58bc3840adef5c23322267520d677b492eebc2
+-system/framework/mediatek-ims-common.jar|d044e2c44e8eb0bfa76d3b64344777c65f4d6bb6
+-system/framework/mediatek-ims-extension-plugin.jar|fbadb06fbf2762b181e15c88cbd7ae299a89be71
+-system/framework/mediatek-telecom-common.jar|b80be86b779269c7078670d573626f0f860427d4
+-system/framework/mediatek-telephony-base.jar|357c2986f3c17adf8eb70f3b3318949a2f48f2cf
+-system/framework/mediatek-telephony-common.jar|6eddc4c33fb73c5aa9828be2dd82bf345f0d338f
+-system/priv-app/ImsService/ImsService.apk|a7d83946238c9ac57fd289255a926cc41362bc26
+
 # Sensors
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
 vendor/bin/hw/motorola.hardware.sensorscalibrate@1.0-service
