@@ -394,4 +394,11 @@
     <string-array name="config_biometric_sensors" translatable="false">
         <item>0:2:15</item>
     </string-array>
+
+    <integer-array name="config_udfps_sensor_props">
+        <item>540</item>
+        <item>2164</item>
+        <item>91</item>
+    </integer-array>
+
 </resources>

@@ -83,6 +83,7 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     if (!mDevice) {
         ALOGE("Can't open HAL module");
     }
+    goodixExtCmd = reinterpret_cast<int32_t(*)(int64_t, int32_t, int32_t)>(mDevice->reserved[0]);
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -98,6 +99,7 @@ BiometricsFingerprint::~BiometricsFingerprint() {
         return;
     }
     mDevice = nullptr;
+    goodixExtCmd = nullptr;
 }
 
 Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
@@ -105,10 +107,14 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    setHbmState(ON);
+    goodixExtCmd(0, 1, 0);
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    setHbmState(OFF);
+    goodixExtCmd(0, 0, 0);
     return Void();
 }
 
@@ -223,6 +229,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    setHbmState(OFF);
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
@@ -250,6 +257,7 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
         uint32_t gid) {
+    setHbmState(OFF);
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
 
