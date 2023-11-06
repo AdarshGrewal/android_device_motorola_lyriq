@@ -32,6 +32,9 @@
 #include <fstream>
 #include <thread>
 
+#define NOTIFY_FINGER_DOWN 1536
+#define NOTIFY_FINGER_UP 1537
+
 #include <drm/mediatek_drm.h>
 
 enum HBM_STATE {
@@ -83,6 +86,7 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     if (!mDevice) {
         ALOGE("Can't open HAL module");
     }
+    this->mGoodixFingerprintDaemon = IGoodixFingerprintDaemon::getService();
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -105,10 +109,17 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    setHbmState(ON);
+    this->mGoodixFingerprintDaemon->sendCommand(NOTIFY_FINGER_DOWN, {},
+                                                [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    setHbmState(OFF);
+    this->mGoodixFingerprintDaemon->sendCommand(NOTIFY_FINGER_UP, {},
+                                                [](int, const hidl_vec<signed char>&) {});
+
     return Void();
 }
 
@@ -223,6 +234,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    setHbmState(OFF);
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
@@ -250,6 +262,7 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
         uint32_t gid) {
+    setHbmState(OFF);
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
 
