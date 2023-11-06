@@ -2099,8 +2099,6 @@ vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/android.hardware.memtrack@1.0-service
 vendor/bin/hw/com.motorola.hardware.display.panel@1.1-service
 vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service
-vendor/bin/hw/motorola.hardware.health.storage@1.0-service
-vendor/bin/hw/motorola.hardware.health@2.0-service
 vendor/bin/hw/motorola.hardware.input@1.0-service
 vendor/bin/hw/motorola.hardware.wireless.wlc@2.0-service
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
@@ -2215,8 +2213,6 @@ vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
-vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
-vendor/etc/init/motorola.hardware.health@2.0-service.rc
 vendor/etc/init/motorola.hardware.input@1.0-service.rc
 vendor/etc/init/motorola.hardware.wireless.wlc@2.0-service.rc
 vendor/etc/init/mtk_pkm_service.rc
@@ -2600,8 +2596,6 @@ vendor/lib64/ls_nq_client.so
 vendor/lib64/mediacas/libclearkeycasplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
-vendor/lib64/motorola.hardware.health.storage@1.0.so
-vendor/lib64/motorola.hardware.health@2.0.so
 vendor/lib64/motorola.hardware.input@1.0.so
 vendor/lib64/motorola.hardware.wireless.wlc@2.0.so
 vendor/lib64/motrilutils.so
