@@ -320,16 +320,6 @@
         <fqname>@1.0::ISupplicantMot/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>motorola.hardware.wireless.wlc</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IMotWlc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IMotWlc/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.apmonitor</name>
         <transport>hwbinder</transport>
         <version>2.0</version>

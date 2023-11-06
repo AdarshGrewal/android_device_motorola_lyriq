@@ -2099,8 +2099,6 @@ vendor/bin/hardware_revisions.sh
 vendor/bin/hw/android.hardware.cas@1.2-service-lazy
 vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/android.hardware.memtrack@1.0-service
-vendor/bin/hw/motorola.hardware.input@1.0-service
-vendor/bin/hw/motorola.hardware.wireless.wlc@2.0-service
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
@@ -2211,8 +2209,6 @@ vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
-vendor/etc/init/motorola.hardware.input@1.0-service.rc
-vendor/etc/init/motorola.hardware.wireless.wlc@2.0-service.rc
 vendor/etc/init/mtk_pkm_service.rc
 vendor/etc/init/mtklog.rc
 vendor/etc/init/networksetting.rc
@@ -2251,7 +2247,6 @@ vendor/etc/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml
 vendor/etc/vintf/manifest/manifest_rcs.xml
-vendor/etc/vintf/manifest/motorola.hardware.input@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 vendor/etc/wfd.hdcp.bin
 vendor/etc/wfd_source_capability.csv
@@ -2577,8 +2572,6 @@ vendor/lib64/ls_nq_client.so
 vendor/lib64/mediacas/libclearkeycasplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
-vendor/lib64/motorola.hardware.input@1.0.so
-vendor/lib64/motorola.hardware.wireless.wlc@2.0.so
 vendor/lib64/motrilutils.so
 vendor/lib64/mtk000_mipi_raw_IdxMgr.so
 vendor/lib64/nwk_opt_imp.so
