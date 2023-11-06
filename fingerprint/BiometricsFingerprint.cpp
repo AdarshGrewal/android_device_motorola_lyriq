@@ -25,6 +25,42 @@
 
 #include <inttypes.h>
 #include <unistd.h>
+#include <sys/ioctl.h>
+
+#include <chrono>
+#include <cmath>
+#include <fstream>
+#include <thread>
+
+#include <drm/mediatek_drm.h>
+
+enum HBM_STATE {
+    OFF = 0,
+    ON = 2
+};
+
+void setHbmState(int state) {
+    struct panel_param_info param_info;
+    int32_t node = open("/dev/dri/card0", O_RDWR);
+    int32_t ret = 0;
+
+    if (node < 0) {
+        ALOGE("Failed to get card0!");
+        return;
+    }
+
+    param_info.param_idx = PARAM_HBM;
+    param_info.value = state;
+
+    ret = ioctl(node, DRM_IOCTL_SET_PANEL_FEATURE, &param_info);
+    if (ret < 0) {
+        ALOGE("IOCTL call failed with ret = %d", ret);
+    } else {
+        ALOGI("HBM state set successfully. New state: %d",state);
+    }
+
+    close(node);
+}
 
 namespace android {
 namespace hardware {
