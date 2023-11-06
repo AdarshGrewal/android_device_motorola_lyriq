@@ -2082,7 +2082,6 @@ vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
-vendor/bin/hw/vendor.tesiai.hardware.hdcpconnection@1.0-service
 vendor/bin/init.insmod.sh
 vendor/bin/init.mmi.backup.trustlet.sh
 vendor/bin/init.mmi.block_perm.sh
@@ -2197,7 +2196,6 @@ vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/init/vendor.mmi.carrier.rc
-vendor/etc/init/vendor.tesiai.hardware.hdcpconnection@1.0-service.rc
 vendor/etc/init/vendor_flash_recovery.rc
 vendor/etc/jiigan/jiigan_model.data
 vendor/etc/mot_spn_table
@@ -2256,7 +2254,6 @@ vendor/lib/hw/local_time.default.so
 vendor/lib/hw/memtrack.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib/hw/vendor.tesiai.hardware.hdcpconnection@1.0-impl.so
 vendor/lib/lib3a.af.assist.models.so
 vendor/lib/libAVCSecureVencCA.so
 vendor/lib/libDxHdcp.so
@@ -2402,7 +2399,6 @@ vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
-vendor/lib/vendor.tesiai.hardware.hdcpconnection@1.0.so
 vendor/lib64/AV1SecureVdecCA.so
 vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/HEVCSecureVdecCA.so
@@ -2412,7 +2408,6 @@ vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/local_time.default.so
 vendor/lib64/hw/memtrack.default.so
 vendor/lib64/hw/sound_trigger.primary.default.so
-vendor/lib64/hw/vendor.tesiai.hardware.hdcpconnection@1.0-impl.so
 vendor/lib64/jcos_client.so
 vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/libAVCSecureVencCA.so
@@ -2561,7 +2556,6 @@ vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so
-vendor/lib64/vendor.tesiai.hardware.hdcpconnection@1.0.so
 vendor/res/images/lcd_test_00.png
 vendor/res/images/lcd_test_01.png
 vendor/res/images/lcd_test_02.png
