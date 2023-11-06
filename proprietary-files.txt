@@ -1,6 +1,7 @@
 # LYRIQ_G_T2TL33.3-62-3
 
 # Audio
+vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/hw/android.hardware.audio.service.mediatek
 vendor/etc/AudioLog_dynamic.xml
@@ -136,11 +137,13 @@ vendor/etc/bluetooth_audio_policy_configuration.xml
 vendor/etc/bluetooth_offload_audio_policy_configuration.xml
 vendor/etc/bluetooth_ums_offload_audio_policy_configuration.xml
 vendor/etc/init/android.hardware.audio.service.mediatek.rc
+vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/smartpa_param/AW_DSP.bin
 vendor/etc/usb_audio_accessory_only_policy_configuration.xml
 vendor/etc/usb_audio_policy_configuration.xml
+vendor/etc/vintf/manifest/manifest.xml:vendor/etc/vintf/manifest/manifest_audio_radar.xml
 vendor/firmware/aw882xx_acf.bin
 vendor/lib/android.hardware.audio.common@6.0-util.so
 vendor/lib/audio_common-aidl-cpp.so
@@ -249,6 +252,7 @@ vendor/lib64/soundfx/libreverbwrapper.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libvisualizer.so
+vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 
@@ -1294,6 +1298,10 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
+# Display Configs
+vendor/etc/cust_color_0.xml
+vendor/etc/cust_color_1.xml
+
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
@@ -1315,11 +1323,13 @@ vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodix.rc
 vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
 vendor/lib/com.motorola.hardware.biometric.fingerprint@1.0.so
 vendor/lib/hw/fingerprint.goodix.default.so
+vendor/lib/libgf_hal.so
 vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1_vendor.so
 vendor/lib64/android.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.0.so
 vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1_vendor.so
 
@@ -1369,6 +1379,9 @@ vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
+vendor/lib64/mt6893/libmcv_runtime.mtk.so
+vendor/lib64/mt6893/libmdla_ut.so
+vendor/lib64/mt6893/libmnl.so
 
 # Hotword
 product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk
@@ -1518,6 +1531,19 @@ vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
 vendor/lib64/libvpu.so
 
+# Media (configs)
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_c2.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_google_audio.xml
+vendor/etc/media_codecs_google_c2_audio.xml
+vendor/etc/media_codecs_google_c2_video.xml
+vendor/etc/media_codecs_mediatek_audio.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_vendor.xml
+
 # Media (OMX)
 vendor/lib/libMtkOmxAdpcmDec.so
 vendor/lib/libMtkOmxApeDec.so
@@ -1645,6 +1671,7 @@ vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
 
 # NFC
+vendor/bin/SN1X0__RF-On.txt
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/bin/hw/android.hardware.secure_element_snxxx@1.2-service
 vendor/bin/hw/vendor.nxp.hardware.nfc@1.2-service
@@ -1843,6 +1870,7 @@ system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
 vendor/bin/hw/motorola.hardware.sensorscalibrate@1.0-service
 vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
+vendor/etc/init/hw/init.sensor_2_0.rc
 vendor/etc/init/motorola.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/motorola/sensors/mot_sensor_settings.json
 vendor/etc/permissions/motorola-hardware-sensorscalibrate.xml
@@ -2073,7 +2101,6 @@ vendor/lib64/motorola.hardware.wifi.supplicant@1.0_vendor.so
 # WIP
 vendor/bin/AgentTest
 vendor/bin/EEReport
-vendor/bin/SN1X0__RF-On.txt
 vendor/bin/TBaseDeviceBinding
 vendor/bin/apanic_annotate.sh
 vendor/bin/apanic_copy.sh
@@ -2081,7 +2108,6 @@ vendor/bin/apanic_mtk.sh
 vendor/bin/apanic_save.sh
 vendor/bin/aplogcat
 vendor/bin/aplogd
-vendor/bin/atcid
 vendor/bin/autobt
 vendor/bin/aw882xx_cali
 vendor/bin/batch
@@ -2163,10 +2189,7 @@ vendor/etc/aurisys_config_rv.xml
 vendor/etc/bt_stack_debug.conf
 vendor/etc/bt_stack_level6.conf
 vendor/etc/cgroups.json
-vendor/etc/cust_color_0.xml
-vendor/etc/cust_color_1.xml
 vendor/etc/cust_silky_brightness.xml
-vendor/etc/default_volume_tables.xml
 vendor/etc/dolby/dax-default.xml
 vendor/etc/factory.ini
 vendor/etc/fs_config_dirs
@@ -2177,7 +2200,6 @@ vendor/etc/init/EEReport.rc
 vendor/etc/init/android.hardware.cas@1.2-service-lazy.rc
 vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/etc/init/android.hardware.memtrack@1.0-service.rc
-vendor/etc/init/atcid.rc
 vendor/etc/init/bootperf.rc
 vendor/etc/init/chipinfo_init.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.1-service.rc
@@ -2203,7 +2225,6 @@ vendor/etc/init/hw/init.modem.rc
 vendor/etc/init/hw/init.mt6893.rc
 vendor/etc/init/hw/init.mt6893.usb.rc
 vendor/etc/init/hw/init.project.rc
-vendor/etc/init/hw/init.sensor_2_0.rc
 vendor/etc/init/hw/init_conninfra.rc
 vendor/etc/init/hw/meta_init.connectivity.common.rc
 vendor/etc/init/hw/meta_init.connectivity.rc
@@ -2276,17 +2297,6 @@ vendor/etc/md/cacerts/tls/StaatderNederlandenOrganisatieServicesCA-G3.cer
 vendor/etc/md/cacerts/tls/StaatderNederlandenRootCA-G3.cer
 vendor/etc/md/cacerts/tls/certSIGNROOTCA.crt
 vendor/etc/md/cacerts/tls/certSIGN_ROOT_CA.crt
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/media_codecs_google_audio.xml
-vendor/etc/media_codecs_google_c2_audio.xml
-vendor/etc/media_codecs_google_c2_video.xml
-vendor/etc/media_codecs_mediatek_audio.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_profiles.xml
-vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_vendor.xml
 vendor/etc/mot_spn_table
 vendor/etc/motorola/12m/Factory_SW_Logo.jpg
 vendor/etc/motorola/12m/cqatest_config.xml
@@ -2312,7 +2322,6 @@ vendor/etc/vhw.xml
 vendor/etc/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml
 vendor/etc/vintf/manifest/fdrcontrol_1.2_manifest.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
-vendor/etc/vintf/manifest/manifest.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml
 vendor/etc/vintf/manifest/manifest_rcs.xml
 vendor/etc/vintf/manifest/motorola.hardware.input@1.0-service.xml
@@ -2666,9 +2675,6 @@ vendor/lib64/motorola.hardware.health@2.0.so
 vendor/lib64/motorola.hardware.input@1.0.so
 vendor/lib64/motorola.hardware.wireless.wlc@2.0.so
 vendor/lib64/motrilutils.so
-vendor/lib64/mt6893/libmcv_runtime.mtk.so
-vendor/lib64/mt6893/libmdla_ut.so
-vendor/lib64/mt6893/libmnl.so
 vendor/lib64/mtk000_mipi_raw_IdxMgr.so
 vendor/lib64/nwk_opt_imp.so
 vendor/lib64/se_extn_client.so
@@ -2676,7 +2682,6 @@ vendor/lib64/shared-file-region-aidl-cpp.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
-vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
