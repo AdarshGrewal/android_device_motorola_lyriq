@@ -2387,8 +2387,6 @@ vendor/lib/libperfctl_vendor.so
 vendor/lib/libpixelflinger.so
 vendor/lib/libpkip.so
 vendor/lib/libpkm.so
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib/librcs_interface.so
 vendor/lib/libreference-ril.so
 vendor/lib/libril.so
@@ -2542,8 +2540,6 @@ vendor/lib64/libpcap.so
 vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpixelflinger.so
 vendor/lib64/libpkm.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so
 vendor/lib64/librilutils.so
