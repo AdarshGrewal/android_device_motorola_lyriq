@@ -78,7 +78,6 @@ private:
     std::mutex mClientCallbackMutex;
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
     fingerprint_device_t *mDevice;
-    int32_t(*goodixExtCmd)(int64_t, int32_t, int32_t);
 };
 
 }  // namespace implementation
