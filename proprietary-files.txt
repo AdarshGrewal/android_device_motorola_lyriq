@@ -1300,12 +1300,6 @@ product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 
 # Fingerprint
-vendor/lib/com.motorola.hardware.biometric.fingerprint@1.0.so
-vendor/lib/com.motorola.hardware.display.panel@1.0.so
-vendor/lib/hw/fingerprint.goodix.default.so:vendor/lib/hw/fingerprint.default.so
-vendor/lib/libgf_hal.so
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1_vendor.so
 vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.0.so
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
 vendor/lib64/hw/fingerprint.goodix.default.so:vendor/lib64/hw/fingerprint.default.so
