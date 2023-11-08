@@ -1648,12 +1648,7 @@ vendor/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
 # NFC
 vendor/bin/SN1X0__RF-On.txt
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
-vendor/bin/hw/android.hardware.secure_element_snxxx@1.2-service
-vendor/bin/hw/vendor.nxp.hardware.nfc@1.2-service
-vendor/bin/nxpnfcinfo
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
-vendor/etc/init/android.hardware.secure_element_snxxx@1.2-service.rc
-vendor/etc/init/vendor.nxp.hardware.nfc@1.2-service.rc
 vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nci_100.conf
@@ -1670,19 +1665,6 @@ vendor/etc/libnfc-nxp_560.conf
 vendor/etc/nfc_calibration.txt
 vendor/etc/sn100u_nfcon.pnscr
 vendor/etc/sn100u_pnx_ese_cplc.pnscr
-vendor/lib/libnxp_extamp_intf.so
-vendor/lib/nfc_nci.nqx.default.hw.so
-vendor/lib/vendor.nxp.hardware.nxpese@1.0.so
-vendor/lib/vendor.nxp.nxpnfc@2.0.so
-vendor/lib64/ese_client.so
-vendor/lib64/ese_spi_nxp.so
-vendor/lib64/ese_spi_nxp_snxxx.so
-vendor/lib64/libnxp_extamp_intf.so
-vendor/lib64/nfc_nci.nqx.default.hw.so
-vendor/lib64/vendor.nxp.hardware.nxpese@1.0.so
-vendor/lib64/vendor.nxp.nxpese@1.0.so
-vendor/lib64/vendor.nxp.nxpnfc@2.0.so
-vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so
 
 # NFC (firmware)
 vendor/lib/libpn557_fw.so
@@ -2288,7 +2270,6 @@ vendor/lib/libcapctrl.so
 vendor/lib/libcares_naptr.so
 vendor/lib/libcarrierconfig.so
 vendor/lib/libccci_util.so
-vendor/lib/libchrome.so
 vendor/lib/libcmdl.so
 vendor/lib/libcmdl_ndk.mtk.vndk.so
 vendor/lib/libconnfem.so
@@ -2448,7 +2429,6 @@ vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libcamalgo.aidepth.so
 vendor/lib64/libcamalgo.vaidepth.so
 vendor/lib64/libcapctrl.so
-vendor/lib64/libchrome.so
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libcppcose_rkp.so
 vendor/lib64/libcvsd_mtk.so
