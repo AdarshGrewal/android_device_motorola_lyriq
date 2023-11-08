@@ -1,0 +1,10 @@
+service frs /vendor/bin/frs
+    class main
+    socket thermal_socket stream 660 root system
+    user root
+    group system
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start frs

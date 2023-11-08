@@ -1,0 +1,15 @@
+#INTERNAL_START
+on post-fs
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+on boot
+    # force on usb
+    # write /sys/class/udc/${sys.usb.controller}/device/cmode 3
+
+service spm_script /vendor/bin/spm_loader
+    user system
+    group system
+    oneshot
+#INTERNAL_END

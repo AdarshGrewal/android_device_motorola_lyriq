@@ -160,7 +160,54 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.recovery.mt6893.rc
+    apanic.rc \
+    bootperf.rc \
+    chipinfo_init.rc \
+    dmc_core.rc \
+    factory_init.connectivity.common.rc \
+    factory_init.connectivity.rc \
+    factory_init.project.rc \
+    factory_init.rc \
+    gbe.rc \
+    init.aee.rc \
+    init.ago.rc \
+    init.bt_drv.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.connfem.rc \
+    init.conninfra.rc \
+    init.fpsgo.rc \
+    init.frs.rc \
+    init.gps_drv.rc \
+    init.mmi.backup.trustlet.rc \
+    init.mmi.chipset.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.mmi.sec.rc \
+    init.modem.rc \
+    init.mt6893.rc \
+    init.mt6893.usb.rc \
+    init.project.rc \
+    init.recovery.mt6893.rc \
+    init.wlan_drv.rc \
+    init_conninfra.rc \
+    ipsec_mon.rc \
+    lbs_hidl_service.rc \
+    meta_init.connectivity.common.rc \
+    meta_init.connectivity.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
+    meta_init.vendor.rc \
+    mtk_pkm_service.rc \
+    mtklog.rc \
+    multi_init.rc \
+    networksetting.rc \
+    rcs_volte_stack.rc \
+    ueventd.rc \
+    vendor.mmi.carrier.rc \
+    vendor_flash_recovery.rc
 
 # IMS
 PRODUCT_BOOT_JARS += \

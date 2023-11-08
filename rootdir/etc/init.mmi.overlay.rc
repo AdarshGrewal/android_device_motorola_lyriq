@@ -1,0 +1,196 @@
+# NFC ST21NFC
+on property:ro.vendor.hw.dualsim=true
+   setprop persist.vendor.radio.multisim.config dsds
+
+on property:ro.vendor.hw.dualsim=false
+   setprop persist.vendor.radio.multisim.config ""
+
+import /vendor/etc/init/hw/init.vendor.st21nfc.rc
+import /vendor/etc/init/android.hardware.nfc@1.2-service.st.rc
+
+on early-init
+   insmod /vendor/lib/modules/sensors_class.ko
+   insmod /vendor/lib/modules/mmi_sys_temp.ko
+   insmod /vendor/lib/modules/aw883xx_dlkm.ko
+   insmod /vendor/lib/modules/sx937x_sar.ko
+   insmod /vendor/lib/modules/exfat.ko
+   insmod /vendor/lib/modules/bq25980_mmi_sc.ko
+   insmod /vendor/lib/modules/mmi_parallel_charger.ko
+   insmod /vendor/lib/modules/cps_wls_charger_4038.ko
+   insmod /vendor/lib/modules/mm8013c_battery.ko
+   insmod /vendor/lib/modules/aw862x.ko
+   insmod /vendor/lib/modules/goodix_mtk_fod.ko
+
+on property:init.svc.fuelgauged=running
+   stop fuelgauged
+
+on property:init.svc.fuelgauged_nvram=running
+   stop fuelgauged_nvram
+
+on property:ro.vendor.hw.nfc=ese_st
+   insmod /vendor/lib/modules/st54nfc.ko
+   insmod /vendor/lib/modules/st54spi.ko
+on property:ro.vendor.hw.nfc=nq
+   insmod /vendor/lib/modules/nxp_i2c.ko
+   wait /dev/nq-nci
+   chown nfc nfc /dev/nq-nci
+   chmod 0666 /dev/nq-nci
+on property:ro.vendor.hw.nfc=ese_nq
+   insmod /vendor/lib/modules/nxp_i2c.ko
+   insmod /vendor/lib/modules/nxp_ese.ko
+   wait /dev/nq-nci
+   chown nfc nfc /dev/nq-nci
+   chmod 0666 /dev/nq-nci
+   wait /dev/p73
+   chown secure_element secure_element /dev/p73
+   chmod 0666 /dev/p73
+
+
+on property:ro.build.type=userdebug
+    insmod /vendor/lib/modules/watchdogtest.ko
+
+on post-fs-data
+    # calibration
+    mkdir /data/vendor/sensor 0774 system system
+    # Sensor
+    chmod 0660 /dev/hf_manager
+    chown system system /dev/hf_manager
+
+    # config fingerprint
+    mkdir /data/vendor/.fps 0770 system vendor_fingerp
+    mkdir /mnt/vendor/persist/fps 0770 system system
+
+    mkdir /data/vendor/egis 0770 system vendor_fingerp
+    mkdir /data/vendor/egis/cqa 0770 system vendor_fingerp
+    mkdir /mnt/vendor/persist/egis 0770 system vendor_fingerp
+    mkdir /data/vendor/gf_data 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system vendor_fingerp
+    mkdir /data/vendor/secure_element 0770 secure_element secure_element
+
+    # Required by touchRec for write the touch data
+    mkdir /data/vendor/touchrec 0770 input input
+
+    # moto proximity sensor cal
+    chmod 0660 /sys/bus/platform/drivers/mtk_nanohub/proxcal
+    chown system system /sys/bus/platform/drivers/mtk_nanohub/proxcal
+
+    # change dir permission
+    mkdir /data/vendor/camera_dump
+    chown root camera /data/vendor/camera_dump
+    chmod 0770 /data/vendor/camera_dump
+
+service nxpnfcinfo /system/vendor/bin/nxpnfcinfo
+    class late_start
+    group nfc
+    user system
+    oneshot
+
+service vendor.modem-rfs-sh /vendor/bin/init.mmi.modem-rfs.sh loop 600
+    class late_start
+    user root
+    group log system radio
+    oneshot
+
+on late-init
+    #moto algo params
+    chmod 0660 /sys/bus/platform/drivers/mtk_nanohub/algo_params
+    chown system system /sys/bus/platform/drivers/mtk_nanohub/algo_params
+    chmod 0664 /sys/class/drm/card0-DSI-1/panelName
+    chown system system /sys/class/drm/card0-DSI-1/panelName
+
+service capsense_reset /vendor/bin/capsense_reset
+    class core
+    user system
+    group system input
+    disabled
+
+on property:sys.boot_completed=1
+  start capsense_reset
+
+on early-init && property:ro.boot.atm=enable && property:ro.bootmode=mot-factory
+   write /sys/class/leds/charging/brightness 3
+
+on early-boot
+    # Permission for Health Storage HAL
+    chown system system /sys/devices/platform/bootdevice/manual_gc
+    chown system system /sys/devices/platform/bootdevice/ufshid/trigger
+    # Create directory for wireless charge test in factory
+    mkdir /data/vendor/wlc 0775 vendor_tcmd system
+
+on boot
+   write /sys/class/i2c-adapter/i2c-4/4-0038/wireless_fw_update 1
+   # change permission for capsensor
+   chown system system /sys/class/capsense/reset
+   chown radio system /sys/class/capsense/reg
+   chown radio system /sys/class/capsense/fw_download_status
+   chmod 0660 /sys/class/capsense/reset
+   chmod 0660 /sys/class/capsense/reg
+   chmod 0660 /sys/class/capsense/fw_download_status
+
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch0/enable
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch0/poll_delay
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch1/enable
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch1/poll_delay
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch2/enable
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch2/poll_delay
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch3/enable
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch3/poll_delay
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch4/enable
+   chown system system /sys/class/sensors/Moto\ CapSense\ Ch4/poll_delay
+   chown system system /sys/class/capsense/int_state
+
+   # Change ownership and permission for Bq25980-charger factory testing
+   chown system system /sys/class/power_supply/cp-master/voltage_now
+   chown system system /sys/class/power_supply/cp-master/charging_enabled
+   chown system system /sys/class/power_supply/cp-slave/charging_enabled
+   chmod 0644 /sys/class/power_supply/cp-master/voltage_now
+   chmod 0664 /sys/class/power_supply/cp-master/charging_enabled
+   chmod 0664 /sys/class/power_supply/cp-slave/charging_enabled
+
+   # aw883xx
+   chmod 0660 /dev/aw_smartpa
+   chown system shell /dev/aw_smartpa
+   chmod 0755 /system_ext/bin/stagefright
+
+   # touch
+   chown system system /sys/class/touchscreen/primary/interpolation
+   chmod 0660 /sys/class/touchscreen/primary/interpolation
+   chown system system /sys/class/touchscreen/primary/sample
+   chmod 0660 /sys/class/touchscreen/primary/sample
+   chown system system /sys/class/touchscreen/primary/edge
+   chmod 0660 /sys/class/touchscreen/primary/edge
+   chown system system /sys/class/touchscreen/primary/gesture
+   chmod 0660 /sys/class/touchscreen/primary/gesture
+
+   # Set wlc perms for chg
+   chown vendor_tcmd system /sys/class/power_supply/wireless/device/tx_mode_vout
+
+   # Set wlc perms for HAL
+   chown system system /sys/class/power_supply/wireless/device/wlc_light_ctl
+   chown system system /sys/class/power_supply/wireless/device/wlc_fan_speed
+   chown system system /sys/class/power_supply/wireless/device/wlc_st_changed
+   chown system system /sys/class/power_supply/wireless/device/wlc_tx_power
+   chown system system /sys/class/power_supply/wireless/device/wlc_tx_type
+   chown system system /sys/class/power_supply/wireless/device/wlc_tx_sn
+   chown system system /sys/class/power_supply/wireless/device/wlc_tx_capability
+   chown system system /sys/class/power_supply/wireless/device/wlc_tx_id
+   chmod 0660 /sys/class/power_supply/wireless/device/wlc_light_ctl
+   chmod 0660 /sys/class/power_supply/wireless/device/wlc_fan_speed
+   chown system system /sys/class/power_supply/charger/moisture_detected
+   chmod 0660 /sys/class/power_supply/charger/moisture_detected
+
+on property:sys.boot_completed=1
+   write /sys/class/power_supply/charger/moisture_detected 1
+
+on fs
+   exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_relay touchscreen_mmi goodix_brl_mmi
+
+# camera eeprom calibration
+on property:sys.boot_completed=1
+  chmod 0644 /data/vendor/camera_dump/mot_gt24p128f_ov50a_eeprom.bin
+  chmod 0644 /data/vendor/camera_dump/serial_number_main.bin
+  chmod 0644 /data/vendor/camera_dump/serial_number_wide.bin
+  chmod 0644 /data/vendor/camera_dump/mot_gt24p64e_ov32b_eeprom.bin
+  chmod 0644 /data/vendor/camera_dump/mot_gt24p64e_hi1336_eeprom.bin
+
+
