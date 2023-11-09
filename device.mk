@@ -177,7 +177,6 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.connfem.rc \
     init.conninfra.rc \
-    init.fpsgo.rc \
     init.frs.rc \
     init.gps_drv.rc \
     init.mmi.backup.trustlet.rc \
