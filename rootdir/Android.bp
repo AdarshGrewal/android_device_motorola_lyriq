@@ -340,10 +340,3 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true
 }
-
-prebuilt_etc {
-    name: "vendor_flash_recovery.rc",
-    src: "etc/vendor_flash_recovery.rc",
-    sub_dir: "init",
-    vendor: true
-}

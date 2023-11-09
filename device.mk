@@ -206,8 +206,7 @@ PRODUCT_PACKAGES += \
     networksetting.rc \
     rcs_volte_stack.rc \
     ueventd.mtk.rc \
-    vendor.mmi.carrier.rc \
-    vendor_flash_recovery.rc
+    vendor.mmi.carrier.rc
 
 # IMS
 PRODUCT_BOOT_JARS += \
