@@ -1,0 +1,8 @@
+# GBE
+service gbe /vendor/bin/gbe
+    class main
+    user system
+    group system readproc wifi media media_rw camera audio
+
+on boot
+    start gbe
