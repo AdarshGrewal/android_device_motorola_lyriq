@@ -2086,7 +2086,6 @@ vendor/bin/memtest_mode
 vendor/bin/meta_tst
 vendor/bin/motobox
 vendor/bin/mt6660_calibration
-vendor/bin/mtk_pkm_service
 vendor/bin/mtk_plpath_utils_ota
 vendor/bin/muxreport
 vendor/bin/netdc

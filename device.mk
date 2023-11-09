@@ -200,7 +200,6 @@ PRODUCT_PACKAGES += \
     meta_init.project.rc \
     meta_init.rc \
     meta_init.vendor.rc \
-    mtk_pkm_service.rc \
     mtklog.rc \
     multi_init.rc \
     networksetting.rc \

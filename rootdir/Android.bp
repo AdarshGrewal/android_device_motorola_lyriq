@@ -300,13 +300,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "mtk_pkm_service.rc",
-    src: "etc/mtk_pkm_service.rc",
-    sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "mtklog.rc",
     src: "etc/mtklog.rc",
     sub_dir: "init",
