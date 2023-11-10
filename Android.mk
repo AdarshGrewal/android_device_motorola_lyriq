@@ -58,6 +58,8 @@ $(64BIT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/lib64/mt6893/libpq_prot.so $@/libpq_prot.so
 	$(hide) ln -sf /vendor/lib64/mt6893/libmnl.so $@/libmnl.so
 	$(hide) ln -sf /vendor/lib64/mt6893/libDR.so $@/libDR.so
+	$(hide) ln -sf /vendor/lib64/mt6893/libneuron_runtime.5.so $@/libneuron_runtime.5.so
+	$(hide) ln -sf /vendor/lib64/mt6893/libneuron_runtime.so $@/libneuron_runtime.so
 
 ALL_DEFAULT_INSTALLED_MODULES += $(32BIT_SYMLINKS) $(64BIT_SYMLINKS)
 
