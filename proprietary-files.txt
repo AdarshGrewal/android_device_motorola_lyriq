@@ -262,14 +262,11 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 vendor/bin/hw/camerahalserver
-vendor/bin/hw/motorola.hardware.camera.imgtuner@2.0-service
 vendor/etc/arcsoft_calibration_u_dc.bin
 vendor/etc/dual_golden_wide.bin
 vendor/etc/init/camerahalserver.rc
-vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
 vendor/etc/tetras/portrait_repair_composite.model
 vendor/firmware/lib3a.ccu
-vendor/lib/hw/motorola.hardware.camera.imgtuner@2.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib/libCamera_motlyriqhi1336mipiraw_ArcSoft_Raw_NV_Capture.so
@@ -506,8 +503,6 @@ vendor/lib/mot_lyriq_ov32b_mipi_raw_tuning.so
 vendor/lib/mot_lyriq_ov50a_mipi_raw_row_tuning.so
 vendor/lib/mot_lyriq_ov50a_mipi_raw_tuning.so
 vendor/lib/mot_lyriq_ov50e_mipi_raw_tuning.so
-vendor/lib/motorola.hardware.camera.imgtuner@1.0.so
-vendor/lib/motorola.hardware.camera.imgtuner@2.0.so
 vendor/lib/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so
@@ -516,7 +511,6 @@ vendor/lib64/arcsoft_portrait_super_night_se_raw.bin
 vendor/lib64/arcsoft_super_night_raw.bin
 vendor/lib64/arcsoft_super_night_se_raw.bin
 vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so
-vendor/lib64/hw/motorola.hardware.camera.imgtuner@2.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so
@@ -962,8 +956,6 @@ vendor/lib64/mot_lyriq_ov50a_mipi_raw_row_tuning.so
 vendor/lib64/mot_lyriq_ov50a_mipi_raw_tuning.so
 vendor/lib64/mot_lyriq_ov50e_mipi_raw_IdxMgr.so
 vendor/lib64/mot_lyriq_ov50e_mipi_raw_tuning.so
-vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
-vendor/lib64/motorola.hardware.camera.imgtuner@2.0.so
 vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
