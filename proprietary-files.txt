@@ -1786,12 +1786,6 @@ vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 vendor/bin/AgentTest
 vendor/bin/EEReport
 vendor/bin/TBaseDeviceBinding
-vendor/bin/apanic_annotate.sh
-vendor/bin/apanic_copy.sh
-vendor/bin/apanic_mtk.sh
-vendor/bin/apanic_save.sh
-vendor/bin/aplogcat
-vendor/bin/aplogd
 vendor/bin/autobt
 vendor/bin/aw882xx_cali
 vendor/bin/batch

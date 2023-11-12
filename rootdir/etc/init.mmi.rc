@@ -1,7 +1,6 @@
 
 # Test commands
 import /vendor/etc/init/hw/init.mmi.tcmd.rc
-import /vendor/etc/init/hw/apanic.rc
 # Chipset-specific file
 import /vendor/etc/init/hw/init.mmi.chipset.rc
 # Target-specific file
@@ -95,12 +94,6 @@ on post-fs-data
     mkdir /data/vendor/hardware_revisions 0755 system system
 
     copy /data/vendor_de/power_supply_logger/memtest.log /data/vendor/power_supply_logger/memtest.log
-
-service vendor.bl_logs_copy /vendor/bin/apanic_copy.sh -i
-    class late_start
-    group log
-    oneshot
-    disabled
 
 on charger
     trigger early-fs

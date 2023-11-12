@@ -158,7 +158,6 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    apanic.rc \
     bootperf.rc \
     chipinfo_init.rc \
     dmc_core.rc \
@@ -167,7 +166,6 @@ PRODUCT_PACKAGES += \
     factory_init.project.rc \
     factory_init.rc \
     gbe.rc \
-    init.aee.rc \
     init.ago.rc \
     init.bt_drv.rc \
     init.cgroup.rc \
@@ -197,7 +195,6 @@ PRODUCT_PACKAGES += \
     meta_init.project.rc \
     meta_init.rc \
     meta_init.vendor.rc \
-    mtklog.rc \
     multi_init.rc \
     networksetting.rc \
     rcs_volte_stack.rc \

@@ -5,13 +5,6 @@
 //
 
 prebuilt_etc {
-    name: "apanic.rc",
-    src: "etc/apanic.rc",
-    sub_dir: "init/hw",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "bootperf.rc",
     src: "etc/bootperf.rc",
     sub_dir: "init",
@@ -71,13 +64,6 @@ prebuilt_etc {
     name: "gbe.rc",
     src: "etc/gbe.rc",
     sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
-    name: "init.aee.rc",
-    src: "etc/init.aee.rc",
-    sub_dir: "init/hw",
     vendor: true
 }
 
@@ -288,13 +274,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "lbs_hidl_service.rc",
     src: "etc/lbs_hidl_service.rc",
-    sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
-    name: "mtklog.rc",
-    src: "etc/mtklog.rc",
     sub_dir: "init",
     vendor: true
 }

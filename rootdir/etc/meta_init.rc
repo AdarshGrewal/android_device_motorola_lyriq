@@ -6,7 +6,6 @@
 
 # I am S vendor meta_init.rc
 
-import /vendor/etc/init/hw/init.aee.rc
 import /vendor/etc/init/trustonic.rc
 import ${ro.vendor.rc}meta_init.connectivity.rc
 import /vendor/etc/init/hw/meta_init.project.rc
