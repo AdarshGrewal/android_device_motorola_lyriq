@@ -1166,9 +1166,6 @@ vendor/lib/libTEECommon.so
 vendor/lib/libTeeClientVendor.so
 vendor/lib/libgz_gp_client.so
 vendor/lib/libgz_uree.so
-vendor/lib/libkeymaster4support.so
-vendor/lib/libkeymaster_messages.so
-vendor/lib/libkeymaster_portable.so
 vendor/lib64/hw/kmsetkey.trustonic.so
 vendor/lib64/hw/libMcGatekeeper.so
 vendor/lib64/hw/libSoftGatekeeper.so
@@ -1176,13 +1173,6 @@ vendor/lib64/libTEECommon.so
 vendor/lib64/libTeeClientVendor.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
-vendor/lib64/libkeymaster4.so
-vendor/lib64/libkeymaster41.so
-vendor/lib64/libkeymaster4_1support.so
-vendor/lib64/libkeymaster4support.so
-vendor/lib64/libkeymaster_messages.so
-vendor/lib64/libkeymaster_portable.so
-vendor/lib64/libpuresoftkeymasterdevice.so
 vendor/lib64/libthha.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so

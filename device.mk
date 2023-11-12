@@ -232,6 +232,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.km41.xml \
     android.hardware.keymaster@4.1.vendor \
+    libkeymaster41.vendor \
+    libkeymaster4_1support.vendor \
+    libpuresoftkeymasterdevice.vendor
+
+PRODUCT_PACKAGES += \
     android.system.keystore2-V1-ndk_platform.vendor
 
 # Light
