@@ -1094,7 +1094,7 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_nTelos.xml
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/slp_conf
-vendor/etc/vintf/manifest/gnss-default.xml
+vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
@@ -1448,7 +1448,7 @@ vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/power_app_cfg.xml
 vendor/etc/powercontable.xml
 vendor/etc/powerscntbl.xml
-vendor/etc/vintf/manifest/power-default.xml
+vendor/etc/vintf/manifest/power-default.xml:vendor/etc/vintf/manifest/power-mtkpower.xml
 vendor/lib/hw/power.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
 vendor/lib/libpower_timer.so
