@@ -1860,8 +1860,6 @@ vendor/etc/cgroups.json
 vendor/etc/cust_silky_brightness.xml
 vendor/etc/dolby/dax-default.xml
 vendor/etc/factory.ini
-vendor/etc/fs_config_dirs
-vendor/etc/fs_config_files
 vendor/etc/fstb.cfg
 vendor/etc/gbe.cfg
 vendor/etc/init/EEReport.rc
