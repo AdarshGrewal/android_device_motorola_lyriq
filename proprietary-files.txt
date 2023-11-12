@@ -37,17 +37,6 @@ vendor/lib/libmtkshifter_vendor.so
 vendor/lib/librt_extamp_intf.so
 vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
-vendor/lib/soundfx/libaudiopreprocessing.so
-vendor/lib/soundfx/libaudiopreprocessing_mtk.so
-vendor/lib/soundfx/libbundlewrapper.so
-vendor/lib/soundfx/libdownmix.so
-vendor/lib/soundfx/libdynproc.so
-vendor/lib/soundfx/libeffectproxy.so
-vendor/lib/soundfx/libhapticgenerator.so
-vendor/lib/soundfx/libldnhncr.so
-vendor/lib/soundfx/libmsstwrapper.so
-vendor/lib/soundfx/libreverbwrapper.so
-vendor/lib/soundfx/libvisualizer.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudioclient_aidl_conversion.so
@@ -63,17 +52,6 @@ vendor/lib64/libaudioloudc.so
 vendor/lib64/libaudioprimarydevicehalifclient.so
 vendor/lib64/libaudiotoolkit_vendor.so
 vendor/lib64/libbluetooth_audio_session.so
-vendor/lib64/soundfx/libaudiopreprocessing.so
-vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
-vendor/lib64/soundfx/libbundlewrapper.so
-vendor/lib64/soundfx/libdownmix.so
-vendor/lib64/soundfx/libdynproc.so
-vendor/lib64/soundfx/libeffectproxy.so
-vendor/lib64/soundfx/libhapticgenerator.so
-vendor/lib64/soundfx/libldnhncr.so
-vendor/lib64/soundfx/libmsstwrapper.so
-vendor/lib64/soundfx/libreverbwrapper.so
-vendor/lib64/soundfx/libvisualizer.so
 vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 
 # Audio (Configs)

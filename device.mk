@@ -56,6 +56,17 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.soundtrigger@2.3-impl
 
+PRODUCT_PACKAGES += \
+    libaudiopreprocessing \
+    libbundlewrapper \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libhapticgenerator \
+    libldnhncr \
+    libreverbwrapper \
+    libvisualizer
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
