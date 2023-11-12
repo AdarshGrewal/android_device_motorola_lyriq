@@ -40,7 +40,6 @@ vendor/lib/libspeechparser_vendor.so
 vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib/soundfx/libbundlewrapper.so
-vendor/lib/soundfx/libdlbvol.so
 vendor/lib/soundfx/libdownmix.so
 vendor/lib/soundfx/libdynproc.so
 vendor/lib/soundfx/libeffectproxy.so
@@ -48,8 +47,6 @@ vendor/lib/soundfx/libhapticgenerator.so
 vendor/lib/soundfx/libldnhncr.so
 vendor/lib/soundfx/libmsstwrapper.so
 vendor/lib/soundfx/libreverbwrapper.so
-vendor/lib/soundfx/libswdap.so
-vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libvisualizer.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/libaudio_param_parser-vnd.so
@@ -69,7 +66,6 @@ vendor/lib64/libbluetooth_audio_session.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libbundlewrapper.so
-vendor/lib64/soundfx/libdlbvol.so
 vendor/lib64/soundfx/libdownmix.so
 vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libeffectproxy.so
@@ -77,8 +73,6 @@ vendor/lib64/soundfx/libhapticgenerator.so
 vendor/lib64/soundfx/libldnhncr.so
 vendor/lib64/soundfx/libmsstwrapper.so
 vendor/lib64/soundfx/libreverbwrapper.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libvisualizer.so
 vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 
@@ -1271,6 +1265,7 @@ vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml:vendor/etc/vintf/manifest/manifest_media_c2.xml
 vendor/lib/libcodec2_hidl_plugin.so
 vendor/lib/libcodec2_mtk_c2store.so
 vendor/lib/libcodec2_mtk_c2store.so
@@ -1753,8 +1748,6 @@ vendor/bin/factory
 vendor/bin/frs
 vendor/bin/gbe
 vendor/bin/hardware_revisions.sh
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/bin/init.insmod.sh
 vendor/bin/init.mmi.backup.trustlet.sh
@@ -1810,13 +1803,10 @@ vendor/etc/bt_stack_debug.conf
 vendor/etc/bt_stack_level6.conf
 vendor/etc/cgroups.json
 vendor/etc/cust_silky_brightness.xml
-vendor/etc/dolby/dax-default.xml
 vendor/etc/factory.ini
 vendor/etc/fstb.cfg
 vendor/etc/gbe.cfg
 vendor/etc/init/EEReport.rc
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/jiigan/jiigan_model.data
 vendor/etc/mot_spn_table
@@ -1838,9 +1828,7 @@ vendor/etc/task_profiles.json
 vendor/etc/throttle.sh
 vendor/etc/vhw.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
-vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml
 vendor/etc/vintf/manifest/manifest_rcs.xml
-vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 vendor/etc/wfd.hdcp.bin
 vendor/etc/wfd_source_capability.csv
 vendor/etc/xgf.cfg
@@ -1906,7 +1894,6 @@ vendor/lib/libcmdl_ndk.mtk.vndk.so
 vendor/lib/libconnfem.so
 vendor/lib/libcppbor_external.so
 vendor/lib/libcppcose_rkp.so
-vendor/lib/libdapparamstorage.so
 vendor/lib/libdecrypt.so
 vendor/lib/libdlbpreg.so
 vendor/lib/libdrm.so
@@ -1915,7 +1902,6 @@ vendor/lib/libeffects.so
 vendor/lib/libeffectsconfig.so
 vendor/lib/libfgauge_gm30.so
 vendor/lib/libflatbuffers-cpp.so
-vendor/lib/libformatter.so
 vendor/lib/libgf_hal.so
 vendor/lib/libh264dec_customize.so
 vendor/lib/libh264dec_sa.ca7.so
@@ -1992,7 +1978,6 @@ vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/shared-file-region-aidl-cpp.so
-vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/AV1SecureVdecCA.so
@@ -2049,7 +2034,6 @@ vendor/lib64/libcapctrl.so
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libcppcose_rkp.so
 vendor/lib64/libcvsd_mtk.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libdecrypt.so
 vendor/lib64/libdla_loader.so
@@ -2131,7 +2115,5 @@ vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib64/mtk000_mipi_raw_IdxMgr.so
 vendor/lib64/se_extn_client.so
 vendor/lib64/shared-file-region-aidl-cpp.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so

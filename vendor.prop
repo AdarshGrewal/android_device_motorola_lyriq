@@ -128,10 +128,6 @@ ro.vendor.smvr.p2batch.fhd=8
 ro.vendor.smvr.p2batch.hd=16
 ro.vendor.smvr.p2batch.vga=32
 
-# Dolby
-persist.vendor.audio_fx.current=dolby
-ro.vendor.dolby.dax.version=DAX3_3.8.5.20_r1
-
 # FRP
 ro.frp.pst=/dev/block/by-name/frp
 

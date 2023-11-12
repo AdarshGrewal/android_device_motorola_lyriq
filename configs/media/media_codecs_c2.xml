@@ -15,7 +15,6 @@
 -->
 
 <MediaCodecs>
-    <Include href="media_codecs_dolby_audio.xml" />
     <Decoders>
         <MediaCodec name="c2.mtk.mpeg4.decoder" type="video/mp4v-es" >
             <Alias name="OMX.MTK.VIDEO.DECODER.MPEG4" />
