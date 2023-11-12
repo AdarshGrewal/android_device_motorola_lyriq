@@ -1870,9 +1870,6 @@ vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/jiigan/jiigan_model.data
 vendor/etc/mot_spn_table
-vendor/etc/motorola/12m/Factory_SW_Logo.jpg
-vendor/etc/motorola/12m/cqatest_config.xml
-vendor/etc/motorola/12m/key_code_map.txt
 vendor/etc/mpe.conf
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/mtk_platform_codecs_config.xml
@@ -2202,11 +2199,3 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so
-vendor/res/images/lcd_test_00.png
-vendor/res/images/lcd_test_01.png
-vendor/res/images/lcd_test_02.png
-vendor/res/sound/ringtone.wav
-vendor/res/sound/testpattern1.wav
-vendor/usr/keylayout/ReadyForAirRemote_Consumer_Control.kl
-vendor/usr/keylayout/ReadyForAirRemote_Keyboard.kl
-vendor/usr/keylayout/goodix_ts.kl
