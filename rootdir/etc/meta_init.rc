@@ -36,7 +36,6 @@ import /vendor/etc/init/android.hardware.keymaster@4.1-service.trustkernel.rc
 import /vendor/etc/init/android.hardware.security.keymint-service.rc
 #import /vendor/etc/init/vendor.mediatek.hardware.keyinstall@1.0-service.rc
 import /vendor/etc/init/vendor.mediatek.hardware.keymanage@1.0-service.rc
-import /vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 import /vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 import /vendor/etc/init/tee.rc
 import /vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
@@ -189,7 +188,6 @@ on late-fs
     start vendor.keymint-default
     start vendor.keymint-trustonic
     start vendor.keymint-beanpod
-    start keymaster_attestation-1-1
     exec_start wait_for_keymaster
     mount_all --late
 

@@ -434,7 +434,6 @@ on late-fs
     start vendor.keymaster-4-0-trustonic
     start vendor.keymaster-4-0-beanpod
     start vendor.keymaster-4-1-beanpod
-    start keymaster_attestation-1-1
     exec_start wait_for_keymaster
     mount_all --late
 

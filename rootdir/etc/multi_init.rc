@@ -32,7 +32,6 @@ import /vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
 import /vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
 #import /vendor/etc/init/vendor.mediatek.hardware.keyinstall@1.0-service.rc
 import /vendor/etc/init/vendor.mediatek.hardware.keymanage@1.0-service.rc
-import /vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 import /vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 import /vendor/etc/init/tee.rc
 import /vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
