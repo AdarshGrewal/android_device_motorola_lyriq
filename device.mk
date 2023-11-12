@@ -319,6 +319,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/mediatek \
     $(LOCAL_PATH)
 
 # Telephony
