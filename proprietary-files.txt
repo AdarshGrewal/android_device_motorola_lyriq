@@ -1792,7 +1792,6 @@ vendor/bin/batch
 vendor/bin/bt_dump
 vendor/bin/capsense_reset
 vendor/bin/chipinfo
-vendor/bin/dmc_core
 vendor/bin/dumpfaultd
 vendor/bin/factory
 vendor/bin/frs
@@ -1934,7 +1933,6 @@ vendor/lib/libaal_key.so
 vendor/lib/libaal_mtk.so
 vendor/lib/libadropbox.so
 vendor/lib/libalsautils.so
-vendor/lib/libapmonitor_vendor.so
 vendor/lib/libapu_mdw.so
 vendor/lib/libapu_mdw_batch.so
 vendor/lib/libapusys.so
@@ -2054,7 +2052,6 @@ vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/shared-file-region-aidl-cpp.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
@@ -2088,7 +2085,6 @@ vendor/lib64/libadropbox.so
 vendor/lib64/libaidepth_tuning.so
 vendor/lib64/libalsautils.so
 vendor/lib64/libancbase_rt_fusion.so
-vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/libapusys_edma.so
 vendor/lib64/libasn1c_core.so
 vendor/lib64/libasn1c_mapi.so
@@ -2203,10 +2199,6 @@ vendor/lib64/se_extn_client.so
 vendor/lib64/shared-file-region-aidl-cpp.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
-vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so
-vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so
-vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so

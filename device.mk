@@ -160,7 +160,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     bootperf.rc \
     chipinfo_init.rc \
-    dmc_core.rc \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \

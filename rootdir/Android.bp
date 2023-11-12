@@ -19,13 +19,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "dmc_core.rc",
-    src: "etc/dmc_core.rc",
-    sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "factory_init.connectivity.common.rc",
     src: "etc/factory_init.connectivity.common.rc",
     sub_dir: "init/hw",
