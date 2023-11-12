@@ -1343,6 +1343,7 @@ vendor/lib64/hw/memtrack.default.so
 # MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
+vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib/vendor.mediatek.hardware.mms@1.2.so
@@ -1520,6 +1521,7 @@ vendor/lib64/libstorage_otp.so
 vendor/lib64/libsysenv.so
 vendor/lib64/libtrm.so
 vendor/lib64/libwpfa.so
+vendor/lib64/motrilutils.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 
@@ -1531,6 +1533,7 @@ vendor/bin/volte_rcs_ua
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/volte_clientapi_ua.rc
 vendor/etc/init/volte_rcs_ua.rc
+vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib/libipsec_ims_shr.so
 vendor/lib/librcs_volte_core.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
@@ -1913,8 +1916,6 @@ vendor/firmware/valhall-1691526.wa
 vendor/lib/hw/gps.default.so
 vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/local_time.default.so
-vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib/lib3a.af.assist.models.so
 vendor/lib/libAVCSecureVencCA.so
 vendor/lib/libDxHdcp.so
@@ -2189,7 +2190,6 @@ vendor/lib64/ls_nq_client.so
 vendor/lib64/mediacas/libclearkeycasplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
-vendor/lib64/motrilutils.so
 vendor/lib64/mtk000_mipi_raw_IdxMgr.so
 vendor/lib64/nwk_opt_imp.so
 vendor/lib64/se_extn_client.so
