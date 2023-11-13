@@ -217,6 +217,19 @@ PRODUCT_PACKAGES += \
     ueventd.mtk.rc \
     vendor.mmi.carrier.rc
 
+PRODUCT_PACKAGES += \
+    hardware_revisions.sh \
+    init.insmod.sh \
+    init.mmi.backup.trustlet.sh \
+    init.mmi.block_perm.sh \
+    init.mmi.boot.sh \
+    init.mmi.modem-rfs.sh \
+    init.mmi.modules.sh \
+    init.mmi.shutdown.sh \
+    init.mmi.touch.sh \
+    init.mmi.usb.sh \
+    init.oem.hw.sh
+
 # IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \

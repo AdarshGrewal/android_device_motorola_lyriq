@@ -263,3 +263,69 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true
 }
+
+sh_binary {
+    name: "hardware_revisions.sh",
+    src: "bin/hardware_revisions.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.insmod.sh",
+    src: "bin/init.insmod.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.backup.trustlet.sh",
+    src: "bin/init.mmi.backup.trustlet.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.block_perm.sh",
+    src: "bin/init.mmi.block_perm.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.boot.sh",
+    src: "bin/init.mmi.boot.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.modem-rfs.sh",
+    src: "bin/init.mmi.modem-rfs.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.modules.sh",
+    src: "bin/init.mmi.modules.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.shutdown.sh",
+    src: "bin/init.mmi.shutdown.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.touch.sh",
+    src: "bin/init.mmi.touch.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.mmi.usb.sh",
+    src: "bin/init.mmi.usb.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.oem.hw.sh",
+    src: "bin/init.oem.hw.sh",
+    vendor: true
+}

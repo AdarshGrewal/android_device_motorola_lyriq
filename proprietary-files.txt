@@ -1583,7 +1583,6 @@ vendor/firmware/novatek_ts_fw_tm.bin
 
 # USB
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
-vendor/bin/init.mmi.usb.sh
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
@@ -1669,17 +1668,7 @@ vendor/firmware/WIFI_RAM_CODE_soc3_0_1a_1.bin
 vendor/firmware/soc3_0_ram_wifi_1a_1_hdr.bin
 
 # WIP
-vendor/bin/hardware_revisions.sh
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
-vendor/bin/init.insmod.sh
-vendor/bin/init.mmi.backup.trustlet.sh
-vendor/bin/init.mmi.block_perm.sh
-vendor/bin/init.mmi.boot.sh
-vendor/bin/init.mmi.modem-rfs.sh
-vendor/bin/init.mmi.modules.sh
-vendor/bin/init.mmi.shutdown.sh
-vendor/bin/init.mmi.touch.sh
-vendor/bin/init.oem.hw.sh
 vendor/bin/lib3a.ccu.ddr
 vendor/bin/lib3a.ccu.dm
 vendor/bin/lib3a.ccu.pm
