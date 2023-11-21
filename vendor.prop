@@ -157,6 +157,8 @@ ro.vendor.mtk_config_max_dram_size=0x800000000
 vendor.mtk.vdec.waitkeyframeforplay=9
 
 # Mediatek
+ro.soc.model=MT6891Z_Z/CZA
+ro.soc.manufacturer=Mediatek
 ro.vendor.mediatek.platform=MT6893
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1.tc2sp2
 ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc2sp2-V1.223

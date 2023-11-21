@@ -98,15 +98,6 @@ on late-init
     chmod 0664 /sys/class/drm/card0-DSI-1/panelName
     chown system system /sys/class/drm/card0-DSI-1/panelName
 
-service capsense_reset /vendor/bin/capsense_reset
-    class core
-    user system
-    group system input
-    disabled
-
-on property:sys.boot_completed=1
-  start capsense_reset
-
 on early-init && property:ro.boot.atm=enable && property:ro.bootmode=mot-factory
    write /sys/class/leds/charging/brightness 3
 

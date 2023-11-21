@@ -12,13 +12,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "chipinfo_init.rc",
-    src: "etc/chipinfo_init.rc",
-    sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "factory_init.connectivity.common.rc",
     src: "etc/factory_init.connectivity.common.rc",
     sub_dir: "init/hw",
@@ -51,13 +44,6 @@ prebuilt_etc {
     src: "etc/fstab.mt6893",
     vendor: true,
     vendor_ramdisk_available: true
-}
-
-prebuilt_etc {
-    name: "gbe.rc",
-    src: "etc/gbe.rc",
-    sub_dir: "init",
-    vendor: true
 }
 
 prebuilt_etc {
@@ -237,13 +223,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.frs.rc",
-    src: "etc/init.frs.rc",
-    sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "init.gps_drv.rc",
     src: "etc/init.gps_drv.rc",
     sub_dir: "init",
@@ -253,20 +232,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.wlan_drv.rc",
     src: "etc/init.wlan_drv.rc",
-    sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
-    name: "ipsec_mon.rc",
-    src: "etc/ipsec_mon.rc",
-    sub_dir: "init",
-    vendor: true
-}
-
-prebuilt_etc {
-    name: "lbs_hidl_service.rc",
-    src: "etc/lbs_hidl_service.rc",
     sub_dir: "init",
     vendor: true
 }

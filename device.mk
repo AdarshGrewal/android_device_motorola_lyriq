@@ -57,6 +57,15 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
+    audio.r_submix.default \
+    audio.usb.default
+
+PRODUCT_PACKAGES += \
+    libtinycompress \
+    libalsautils \
+    libbluetooth_audio_session
+
+PRODUCT_PACKAGES += \
     libaudiopreprocessing \
     libbundlewrapper \
     libdownmix \
@@ -106,7 +115,8 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm@1.4-service.clearkey \
+    libdrm.vendor
 
 # Device ID attestation
 PRODUCT_COPY_FILES += \
@@ -171,12 +181,10 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     bootperf.rc \
-    chipinfo_init.rc \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
     factory_init.rc \
-    gbe.rc \
     init.ago.rc \
     init.bt_drv.rc \
     init.cgroup.rc \
@@ -184,7 +192,6 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.connfem.rc \
     init.conninfra.rc \
-    init.frs.rc \
     init.gps_drv.rc \
     init.mmi.backup.trustlet.rc \
     init.mmi.chipset.rc \
@@ -198,8 +205,6 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6893.rc \
     init.wlan_drv.rc \
     init_conninfra.rc \
-    ipsec_mon.rc \
-    lbs_hidl_service.rc \
     meta_init.connectivity.common.rc \
     meta_init.connectivity.rc \
     meta_init.modem.rc \
@@ -246,6 +251,7 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
+    libcodec2_hidl_plugin \
     libcodec2_hidl@1.2.vendor \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor
