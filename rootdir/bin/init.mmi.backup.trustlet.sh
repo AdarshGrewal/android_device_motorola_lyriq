@@ -19,10 +19,6 @@ if [[ "$hardware_state" == "0" ]]; then
 	notice "Do not need trustlet backup, skip!"
 	exit 0
 fi
-if [[ "$hardware_state" == "1" && "$vendor_build_type" == "userdebug" ]]; then
-	notice "Do not need trustlet backup, skip!"
-	exit 0
-fi
 if [[ "$backup_state_prop" == "true" ]]; then
 	notice  "Trustlet already backed up, skip!"
 	exit 0
